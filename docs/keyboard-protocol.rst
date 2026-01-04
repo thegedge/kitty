@@ -258,6 +258,12 @@ The exact behavior in these situations depends on the OS, keyboard layout, IME
 system in use and so on. In general, if the terminal emulator receives no key
 information, the key number 0 must be used to indicate a pure "text event".
 
+.. note:: "associated text" is not a description of the key, but the text the
+   OS would send when pressing a key. This could be a single Unicode character,
+   but could also be an entire word. This text is typically reported with key
+   press/repeat events on most platforms, not on release events (but a platform
+   not sending associated text on a release event may change that behavior in the
+   future)
 
 Non-Unicode keys
 ~~~~~~~~~~~~~~~~~~~~~~~
